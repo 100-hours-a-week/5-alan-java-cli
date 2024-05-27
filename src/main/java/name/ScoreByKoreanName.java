@@ -1,11 +1,9 @@
 package name;
 
-import mbti.*;
-
-public class ScoreByName {
+public class ScoreByKoreanName {
     private String myName;
     private String yourName;
-    public ScoreByName(String myName, String yourName) {
+    public ScoreByKoreanName(String myName, String yourName) {
         this.myName = myName;
         this.yourName = yourName;
     }
@@ -20,7 +18,7 @@ public class ScoreByName {
             0, 2, 3, 3, 4, 3, 4, 3, 3, 3, 3, 2, 4, 2, 4, 3, 2, 3, 3, 3, 2, 4, 3, 3, 2, 4, 4, 4
     };
 
-    public static int calculateNameScore(String name) {
+    public int calculateNameScore(String name) {
         int score = 0;
         for (int i = 0; i < name.length(); i++) {
             char c = name.charAt(i);
@@ -37,8 +35,7 @@ public class ScoreByName {
         }
         return score;
     }
-    int score1 = calculateNameScore(myName);
-    int score2 = calculateNameScore(yourName);
+
 
 
 }
